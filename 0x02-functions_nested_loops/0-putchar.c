@@ -1,5 +1,5 @@
 #include "main.h"
-#include "0-putchar.c.h"
+#include "0-putchar.h"
 
 /**
  * main - Check description
