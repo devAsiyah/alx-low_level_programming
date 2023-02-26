@@ -1,33 +1,19 @@
 #include "main.h"
 
 /**
- * print_most_number - function declaration
- * Description: print 0 - 9, except 2 & 4
- * Return: void
+ * print_most_numbers - a function that prints the numbers, from 0 to 9.
+ * Do not print 2 and 4.
+ * followed by a new line.
+ * Return: Always 0
  */
-
-void print_most_numbers(void);
-
-/**
- * print_most_numbers - function definition
- * Description: print 0 - 9, without 2 & 4
- * Return: void
- */
-
 void print_most_numbers(void)
 {
-	int number;
+	int i = '0';
 
-	for (number = 0; number <= 9; number++)
+	for (; i <= '9'; i++)
 	{
-		if (number == 2 || number == 4)
-		{
-			continue;
-		}
-		else
-		{
-			_putchar(number + '0');
-		}
+		if (i != '2' && i != '4')
+			_putchar(i);
 	}
 	_putchar('\n');
 }
