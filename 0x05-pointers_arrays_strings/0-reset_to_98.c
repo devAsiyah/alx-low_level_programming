@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +7,7 @@
  * @n: An integer input pointer
  * Return: Nothing.
  */
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
