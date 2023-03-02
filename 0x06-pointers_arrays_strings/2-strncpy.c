@@ -1,32 +1,35 @@
 #include "main.h"
 
 /**
- * _strncpy - a function that copys the strings.
- * @dest: an input string
- * @src: an input string
- * @n: an input integer
- * Return: A pointer to the resulting string
+ * _strncpy - function declaration
+ * @dest: second string
+ * @src: first string
+ * @n: number of times to copy
+ * Return: a string
  */
+
+char *_strncpy(char *dest, char *src, int n);
+
+/**
+ * _strncpy - function definition
+ * @dest: the second string
+ * @src: the first string
+ * @n: number of times to copy string
+ * Description: copies a string
+ * Return: string
+ */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int srclen = 0, i = 0;
-	char *temp = dest, *start = src;
+	int index;
 
-	while (*src)
+	for (index = 0; index < n && src[index] != '\0'; index++)
 	{
-		srclen++;
-		src++;
+		dest[index] = src[index];
 	}
-
-	srclen++;
-
-	if (n > srclen)
-		n = srclen;
-
-	src = start;
-
-	for (; i < n; i++)
-		*dest++ = *src++;
-
-	return (temp);
+	for (; index < n; index++)
+	{
+		dest[index] = '\0';
+	}
+	return (dest);
 }
